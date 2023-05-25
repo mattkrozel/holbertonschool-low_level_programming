@@ -9,8 +9,6 @@
  */
 int main(void)
 {
-	int l;
-
 	for (int l = 'a'; l <= 'z'; l++)
 	{
 		putchar(tolower(l'\n'));
