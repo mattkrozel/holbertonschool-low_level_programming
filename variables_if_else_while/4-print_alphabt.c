@@ -10,11 +10,15 @@
 
 int main(void)
 {
-	char l;
+	char l, e, q;
 
-	for (l = 'a'; l <= 'z'; l++ | grep[eq])
+	e = 'e'
+	q = 'q'
+
+	for (l = 'a'; l <= 'z'; l++)
 	{
-		putchar(l);
+		if (l != e && l != q)
+			putchar(l);
 	}
 	putchar('\n');
 
