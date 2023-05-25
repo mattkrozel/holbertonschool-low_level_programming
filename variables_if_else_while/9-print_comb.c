@@ -10,9 +10,9 @@
 
 int main(void)
 {
-	char n, f;
+	char n;
 
-	f = ", ";
+	char f = ", ";
 
 	for (n = '0'; n <= '9'; n++)
 	{
