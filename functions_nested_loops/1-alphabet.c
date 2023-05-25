@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code
- *  print alphabet
+ * print_alphabet - check the code
+ * char l
  * Return: Always 0.
  */
 void print_alphabet(void)
