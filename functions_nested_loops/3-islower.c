@@ -11,7 +11,7 @@
 
 int _islower(int c)
 {
-	if (islower(c))
+	if (int islower(int c))
 	{
 		printf("1");
 	}
