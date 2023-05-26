@@ -3,8 +3,8 @@
 #include "main.h"
 
 /**
- * 24_hours - Check main
- * @r: An input number
+ * jack_bauer - Check main
+ * @: An input number
  * Description: function that prints all the minutes in a day
  * Return: nothing
  */
@@ -16,12 +16,12 @@ void jack_bauer(void)
 	{
 		for (m = 0; m < 60; m++)
 		{
-			putchar((h / 10) + '0');
-			putchar((h % 10) + '0');
-			putchar(':');
-			putchar((m / 10) + '0');
-			putchar((m % 10) + '0');
-			putchar('\n');
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
+			_putchar(':');
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
 		}
 	}
 }
