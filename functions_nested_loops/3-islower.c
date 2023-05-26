@@ -11,13 +11,13 @@
 
 int _islower(int c)
 {
-	if (int islower(int c))
+	char l;
+	int result = 0;
+
+	for (l = 'a'; l <= 'z'; l++)
 	{
-		printf("1");
+		if (l == c)
+			result = 1;
 	}
-	else
-	{
-		printf("0");
-	}
-	return (0);
+	return (result);
 }
