@@ -10,7 +10,7 @@
 
 int _islower(int c)
 {
-	int c
+	int c;
 
 	if (islower(c))
 	{
@@ -20,4 +20,5 @@ int _islower(int c)
 	{
 		printf("0");
 	}
+	return (0);
 }
