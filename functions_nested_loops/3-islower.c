@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
  * _islower - Check main
  * @c: An input character
@@ -10,8 +11,6 @@
 
 int _islower(int c)
 {
-	int c;
-
 	if (islower(c))
 	{
 		printf("1");
