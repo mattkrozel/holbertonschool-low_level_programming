@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * _islower - Check main
@@ -9,7 +10,9 @@
 
 int _islower(int c)
 {
-	if (islower(int c))
+	int c
+
+	if (islower(c))
 	{
 		printf("1");
 	}
