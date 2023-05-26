@@ -19,11 +19,12 @@ int print_sign(int n)
 	else if (n < 0)
 	{
 		result = -1;
-		printf("\r-");
+		_putchar('-');
 	}
 	else
 	{
-		printf("0");
+		result = 0;
+		_putchar('0');
 	}
 	return (result);
 }
