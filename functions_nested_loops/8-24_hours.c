@@ -8,7 +8,7 @@
  * Description: function that prints all the minutes in a day
  * Return: nothing
  */
-void jack_bauer(void);
+void jack_bauer(void)
 {
 	int h, m;
 
