@@ -9,12 +9,12 @@
  */
 int print_sign(int n)
 {
-	int result = 0;
+	int result;
 
 	if (n > 0)
 	{
-		printf("+");
 		result = 1;
+		_putchar('+');
 	}
 	else if (n < 0)
 	{
