@@ -4,15 +4,13 @@
 
 /**
  * add - Check main
- * @int: An input number
+ * @a: An input number
+ * @b: an inout number
  * Description: function that adds two integers
  * Return: result
  */
-int add(int, int)
+int add(int a, int b)
 {
-	int result;
 
-	result = add(int, int);
-
-	return (result);
+	return (a + b);
 }
