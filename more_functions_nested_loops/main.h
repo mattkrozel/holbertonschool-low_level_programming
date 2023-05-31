@@ -3,7 +3,7 @@
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
-int _islower(int c);
+void print_numbers(void);
 int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
