@@ -8,7 +8,7 @@
  * Description: function that draws a straight line in the terminal
  * Return: line
  */
-void print_line(int n);
+void print_line(int n)
 {
 	while (n > 0)
 		_putchar(n * ('_'));
