@@ -3,19 +3,19 @@
 #include "main.h"
 
 /**
- * _abs - Check main
+ * print_line - Check main
  * @n: An input number
  * Description: function that draws a straight line in the terminal
  * Return: line
  */
 void print_line(int n)
 {
+	int l = 0;
+
 	if (n > 0)
 	{
-		_putchar(n * ('_'));
-		_putchar('\n');
+		for (; l < n; l++)
+			_putchar('_');
 	}
-	else
-		_putchar('\n');
-	return (0);
+	_putchar('\n');
 }
