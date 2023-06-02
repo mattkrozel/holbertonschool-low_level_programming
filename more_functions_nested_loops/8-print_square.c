@@ -3,24 +3,25 @@
 #include "main.h"
 
 /**
- * print_square - Check main
- * @size: An input number
- * Description: function that prints square made out of #
- * Return: square
+ * main - Check main
+ * @x: An input number
+ * Description: function that prints 1-100 with fizzbuzz
+ * Return: 1-100 and words
  */
-void print_square(int size)
+int main(void)
 {
-	int x, y;
+	int x;
 
-	if (size > 0)
+	for (x = 1; x <= 100; x++)
 	{
-		for (x = 0; x < size; x++)
-		{
-			for (y = 0; y < size; y++)
-				_putchar('#');
-			_putchar('\n');
-		}
+		if (x / 15)
+			printf("FizzBuzz ");
+		else if (x / 3)
+			printf("Fizz ");
+		else if (x / 5)
+			printf("Buzz ");
+		else
+			printf("%d "), x;
 	}
-	else
-		_putchar('\n');
+	return(0);
 }
