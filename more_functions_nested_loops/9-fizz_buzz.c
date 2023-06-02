@@ -3,42 +3,23 @@
 #include "main.h"
 
 /**
- * times_table - Check main
- * @: An input number
- * Description: function that prints 9 times table
- * Return: nothing
+ * main - Entry point
+ * Return: Always 0
  */
-void times_table(void)
+int main(void)
 {
-	int a, b, c;
+	int x;
 
-	for (a = 0; a <= 9; a++)
+	for (x = 1; x <= 100; x++)
 	{
-		for (b = 0; b <= 9; b++)
-		{
-			c = a * b;
-
-			if ((c / 10) == 0)
-			{
-				if (b != 0)
-					putchar(' ');
-				putchar (c + '0');
-
-				if (b == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
-			}
-			else
-			{
-				putchar((c / 10) + '0');
-				putchar((c % 10) + '0');
-				if (b == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
-			}
-		}
-		putchar('\n');
+		if (x / 15)
+			printf("FizzBuzz ");
+		else if (x / 3)
+			printf("Fizz ");
+		else if (x / 5)
+			printf("Buzz ");
+		else
+			printf("%d "), x;
 	}
+	return (0);
 }

@@ -3,23 +3,24 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_square - Write a function that prints a square,
+ * followed by a new line.
+ * @size: An input integer
  * Return: Always 0
  */
-int main(void)
+void print_square(int size)
 {
-	int x;
+	int i, j;
 
-	for (x = 1; x <= 100; x++)
+	if (size > 0)
 	{
-		if (x / 15)
-			printf("FizzBuzz ");
-		else if (x / 3)
-			printf("Fizz ");
-		else if (x / 5)
-			printf("Buzz ");
-		else
-			printf("%d "), x;
+		for (i = 0; i < size; i++)
+		{
+			for (j = 0; j < size; j++)
+				_putchar('#');
+			_putchar('\n');
+		}
 	}
-	return (0);
+	else
+		_putchar('\n');
 }
