@@ -21,6 +21,6 @@ int main(void)
 		else
 			printf("%d ", x);
 	}
-	printf("FizzBuzz");
+	printf("Buzz");
 	return (0);
 }
