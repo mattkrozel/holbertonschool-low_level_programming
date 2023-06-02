@@ -19,7 +19,7 @@ int main(void)
 		else if (x / 5)
 			printf("Buzz ");
 		else
-			printf("%d "), x;
+			printf("%d ", x);
 	}
 	return (0);
 }
