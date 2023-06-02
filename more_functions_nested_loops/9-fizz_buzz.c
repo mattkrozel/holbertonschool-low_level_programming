@@ -14,15 +14,13 @@ int main(void)
 	{
 		if (x / 15)
 			printf("FizzBuzz ");
-		x++;
 		else if (x / 3)
 			printf("Fizz ");
-		x++;
 		else if (x / 5)
 			printf("Buzz ");
-		x++;
 		else
 			printf("%d ", x);
+		x++;
 	}
 	return (0);
 }
