@@ -3,10 +3,8 @@
 #include "main.h"
 
 /**
- * main - Check main
- * @x: An input number
- * Description: function that prints 1-100 with fizzbuzz
- * Return: 1-100 and words
+ * main - Entry point
+ * Return: Always 0
  */
 int main(void)
 {
@@ -23,5 +21,5 @@ int main(void)
 		else
 			printf("%d "), x;
 	}
-	return(0);
+	return (0);
 }
