@@ -11,9 +11,5 @@
 
 void print_rev(char *s)
 {
-	char str[100];
-
-	str = strrev(s);
-	_putchar(str);
-
+	printf("%s", strrev(s));
 }
