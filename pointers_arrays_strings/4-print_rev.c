@@ -4,14 +4,12 @@
 
 /**
  * print_rev - Check main
- * char s
+ * @s: input
  * Description: function that prints string in reverse
  * Return: results
  */
 
 void print_rev(char *s)
 {
-	char rev = strrev(s);
-
-	puts(rev);
+	puts(strrev(s));
 }
