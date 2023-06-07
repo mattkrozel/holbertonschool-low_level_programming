@@ -8,16 +8,27 @@
  * @dest : input
  * @src : input
  * @n : input
- * Description: copies two strings
+ * Description: copies string
  * Return: total
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *temp = dest;
+	char *temp = dest, *clear = src;
+	int len = 0, x = 0;
 
 	while (*src)
+	{
+		len++;
+		src++;
+	}
+
+	if (n > len)
+		n = len;
+
+	src = clear;
+
+	for (; x < n; x++)
 		*dest++ = *src++;
 
-	*dest = '\0';
 	return (temp);
 }
