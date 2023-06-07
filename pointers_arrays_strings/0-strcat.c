@@ -10,7 +10,7 @@
  * Description: concatenates two strings
  * Return: total
  */
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src)
 {
 	comstr = dest + src;
 }
