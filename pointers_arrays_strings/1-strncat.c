@@ -4,21 +4,36 @@
 #include "main.h"
 
 /**
- * *_strcat - check the code
+ * *_strncat - check the code
  * @dest : input
  * @src : input
+ * @n : input
  * Description: concatenates two strings
  * Return: total
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	char *temp = dest;
+	char *temp = dest, *clear = src;
+	int len = 0, x = 0;
+
+	while (*src)
+	{
+		len++;
+		src++;
+	}
 
 	while (*dest)
 		dest++;
 
-	while (*src)
+	if (n > len)
+		n = len;
+
+	src = clear;
+
+	for (; x < n; x++)
 		*dest++ = *src++;
+
+	*dest = '\0';
 
 	return (temp);
 }
