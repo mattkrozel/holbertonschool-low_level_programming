@@ -11,19 +11,21 @@
 
 char *leet(char *s)
 {
-	int l = 0;
+	int l = 0, c;
 	char a1[] = "AaEeOoTtLl";
 	char a2[] = "4433007711";
 
 	while (s[l])
 	{
-		if (s[l] == a1[])
+		for (c = 0; a1[c]; c++)
 		{
-			s[l] = a2[l];
-			l++;
-		}
-		else
-			l++;
+			if (s[l] == a1[c])
+			{
+				s[l] = a2[c];
+				l++;
+			}
+			else
+				l++;
 	}
 	return (s);
 }
