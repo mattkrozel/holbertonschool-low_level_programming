@@ -11,13 +11,13 @@
 
 char *leet(char *s)
 {
-	int l = 0, d = 0;
+	int l = 0;
 	char a1[] = "AaEeOoTtLl";
 	char a2[] = "4433007711";
 
 	while (s[l])
 	{
-		if (s[l] == a1[])
+		if (s[l] == a1)
 		{
 			s[l] = a2[l];
 			l++;
