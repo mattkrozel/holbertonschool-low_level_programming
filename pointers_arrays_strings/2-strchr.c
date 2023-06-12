@@ -14,11 +14,10 @@ char *_strchr(char *s, char c)
 {
 	char *ret = &c;
 	int i = 0;
-	char l;
 
 	for (; s[i] ; i++)
 	{
-		if (s[l] == s[c])
+		if (s[i] == c)
 			return (ret);
 	}
 
