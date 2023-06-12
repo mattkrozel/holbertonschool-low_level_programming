@@ -12,20 +12,26 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int m = 0;
+	int x, y, ct = 0;
 
-	while (*s)
+	for (x = 0; s[x]; x++)
 	{
-		while (*accept)
+		int match = 0;
+
+		for (y = 0; accept[y]; y++)
 		{
-			if (*accept == *s)
+			if (s[x] == accept[y])
 			{
-				m++;
-				s++;
-				accept++;
+				match = 1;
+				break;
 			}
+		}
+		if (match == 0)
+		{
+			break;
+		ct++
 		}
 	}
 
-	return (m);
+	return (ct);
 }
