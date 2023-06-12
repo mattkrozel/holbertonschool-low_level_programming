@@ -29,8 +29,8 @@ unsigned int _strspn(char *s, char *accept)
 		if (match == 0)
 		{
 			break;
-		ct++;
 		}
+		ct++;
 	}
 
 	return (ct);
