@@ -12,14 +12,26 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *ret = &c;
-	int i = 0;
+/*
+ *	int i;
+ *
+ *	for (i = 0; s[i] ; i++)
+ *	{
+ *		if (s[i] == c)
+ *			return (s + i);
+ *	}
+ *	if (s[i] == c)
+ *		return (s + i);
+ *	return (0);
+*/
 
-	for (; s[i] ; i++)
+	while (*s)
 	{
-		if (s[i] == c)
-			return (ret);
+		if (c == *s)
+			return (s);
+		s++;
 	}
-
-	return (NULL);
+	if (c == *s)
+		return (s);
+	return (0);
 }
