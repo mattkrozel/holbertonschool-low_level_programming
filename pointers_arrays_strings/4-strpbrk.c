@@ -13,28 +13,17 @@
 char *_strpbrk(char *s, char *accept)
 {
 	/*
-*	int x, y, ct = 0;
+*	int x, y;
 *
 *	for (x = 0; s[x]; x++)
 *	{
-*		int match = 0;
-*
 *		for (y = 0; accept[y]; y++)
 *		{
 *			if (s[x] == accept[y])
-*			{
-*				match = 1;
-*				break;
-*			}
+*				return (s + x);
 *		}
-*		if (match == 0)
-*		{
-*			break;
-*		}
-*		ct++;
 *	}
-*
-*	return (ct);
+*	return (0);
 */
 	char *res = accept;
 
