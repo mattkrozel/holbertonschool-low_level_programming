@@ -35,9 +35,9 @@ char *_strpbrk(char *s, char *accept)
 *	}
 *
 *	return (ct);
-*
-*	char *res = accept;
 */
+	char *res = accept;
+
 	while (*s)
 	{
 		while (*accept)
@@ -46,8 +46,8 @@ char *_strpbrk(char *s, char *accept)
 				return (s);
 			accept++;
 		}
-
+		accept = res;
 		s++;
 	}
-	return (NULL);
+	return (0);
 }
