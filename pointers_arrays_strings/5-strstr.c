@@ -1,6 +1,4 @@
-#include <unistd.h>
 #include <stdio.h>
-#include <ctype.h>
 #include "main.h"
 
 /**
@@ -26,7 +24,7 @@ char *_strstr(char *haystack, char *needle)
 
 		if (*needle == '\0')
 			return (haystack);
-		haystack = resh;
+		haystack = resh + 1;
 	}
-	return (0);
+	return (NULL);
 }
