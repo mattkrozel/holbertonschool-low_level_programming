@@ -35,14 +35,19 @@ char *_strpbrk(char *s, char *accept)
 *	}
 *
 *	return (ct);
-	*/
+*
+*	char *res = accept;
+*/
 	while (*s)
 	{
-		if (*accept == *s)
-			return (s);
+		while (*accept)
+		{
+			if (*accept == *s)
+				return (s);
+			accept++;
+		}
+
 		s++;
 	}
-	if (*accept == *s)
-		return (s);
 	return (0);
 }
