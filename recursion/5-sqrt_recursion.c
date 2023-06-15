@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-int _sqrt_(int temp, sqrt);
+int _sqrt_(int temp, int sqrt);
 
 /**
  * _sqrt_recursion - Check main
