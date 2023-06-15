@@ -23,7 +23,7 @@ int _sqrt_recursion(int n)
  * Return: Results
  */
 
-int _sqrt_(int temp, sqrt)
+int _sqrt_(int temp, int sqrt)
 {
 	if (temp > sqrt)
 		return (-1);
