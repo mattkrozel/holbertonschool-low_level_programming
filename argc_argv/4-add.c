@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - a program that adds two numbers
