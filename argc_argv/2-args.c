@@ -7,7 +7,7 @@
  * @argv: argument value, a strings that come after calling function
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	while (argc--)
 		printf("%s\n", argv++);
