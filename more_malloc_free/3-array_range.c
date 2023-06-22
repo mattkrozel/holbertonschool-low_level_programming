@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
- * **alloc_grid - function that returns pointer to 2d
- * array of ints
- * @width: input
- * @height: input
+ * *array_range - function that 
+ * @min: input
+ * @max: input
  * Return: Nothing.
  */
 
-int **alloc_grid(int width, int height)
+int *array_range(int min, int max)
 {
 	int **array, x = 0, y = 0;
 

@@ -1,14 +1,12 @@
 #include "main.h"
-#include <stdlib.h>
+
 /**
- * *str_concat - function that concatenates two swtrings,
- * with the returned pointer pointing to a newly
- * allocated space in memory
- * @s1: input
- * @s2: input
+ * *_calloc - function that 
+ * @size: input
+ * @nmemb: input
  * Return: Nothing.
  */
-char *str_concat(char *s1, char *s2)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int x = 0, cnt1 = 0, cnt2 = 0;
 	char *finstr, *st1, *st2;
