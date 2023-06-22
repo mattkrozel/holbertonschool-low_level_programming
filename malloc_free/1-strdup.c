@@ -28,4 +28,18 @@ char *_strdup(char *str)
 
 	str = st;
 	str2 = malloc(sizeof(char) * (len + 1));
+	st = str2;
+
+	if (new_str != NULL)
+	{
+		for (; x < cnt; x++)
+		{
+			str2[x] = *str;
+			str++;
+		}
+		str2[x] = '\0';
+		return (st);
+	}
+	else
+		return (NULL);
 }
