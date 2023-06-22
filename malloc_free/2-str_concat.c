@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * *str_concat - function that concatenates two swtrings,
  * with the returned pointer pointing to a newly
