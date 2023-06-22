@@ -27,10 +27,10 @@ char *_strdup(char *str)
 	}
 
 	str = st;
-	str2 = malloc(sizeof(char) * (len + 1));
+	str2 = malloc(sizeof(char) * (cnt + 1));
 	st = str2;
 
-	if (new_str != NULL)
+	if (str2 != NULL)
 	{
 		for (; x < cnt; x++)
 		{
