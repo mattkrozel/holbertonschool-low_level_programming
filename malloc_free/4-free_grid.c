@@ -5,7 +5,7 @@
  * function
  * @grid: input
  * @height: input
- * Return: Nothing.
+ * Return: value
  */
 
 void free_grid(int **grid, int height)
@@ -17,5 +17,5 @@ void free_grid(int **grid, int height)
 	while (x < height)
 		free((int *)grid[x++]);
 
-	return (grid);
+	free(grid);
 }
