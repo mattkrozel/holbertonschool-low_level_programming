@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 	s2 = st2;
 	finstr = malloc(sizeof(char) * (cnt1 + cnt2 + 1));
 	st1 = finstr;
-	if (finstr != NULL)
+	if (finstr == NULL)
 		return (NULL);
 	for (; x < (cnt1 + cnt2); x++)
 	{
