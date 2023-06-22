@@ -26,14 +26,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[sz2])
 		sz2++;
 
-	if (x >= sz2)
-		x = sz2;
+	if (n >= sz2)
+		n = sz2;
 
-	finstr = malloc(sz1 + x + 1);
+	finstr = malloc(sz1 + n + 1);
 	if (finstr == NULL)
 		return (NULL);
 
-	for (; x < (sz1 + x); x++)
+	for (; x < (sz1 + n); x++)
 	{
 		if (x < sz1)
 			finstr[x] = *s1, s1++;
