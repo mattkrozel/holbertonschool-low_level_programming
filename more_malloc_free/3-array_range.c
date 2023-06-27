@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *array_range - function that 
+ * *array_range - function that creates an array of integers
  * @min: input
  * @max: input
  * Return: Nothing.
@@ -9,31 +9,19 @@
 
 int *array_range(int min, int max)
 {
-	int **array, x = 0, y = 0;
+	int diff, x, *array;
 
-	if (width <= 0 || height <= 0)
+	if (min > max)
 		return (NULL);
 
-	array = (int **)malloc(sizeof(int *) * height);
+	diff = max - min;
+	array = malloc((diff + 1) * sizeof(int));
 	if (array == NULL)
-	{
-		free(array);
 		return (NULL);
-	}
-	for (; x < height; x++)
-	{
-		array[x] = (int *)malloc(sizeof(int) * width);
-		if (array[x] == NULL)
-		{
-			for (; x >= 0; x--)
-				free(array[x]);
-			free(array);
-			return (NULL);
-		}
-	}
-	for (x = 0; x < height; x++)
-		for (; y < width; y++)
-			array[x][y] = 0;
+
+	for (x = 0; x <= diff; x++)
+		array[x] = min++;
+
 
 	return (array);
 }
