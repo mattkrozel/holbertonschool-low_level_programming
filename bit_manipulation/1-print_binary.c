@@ -1,20 +1,30 @@
-#include "lists.h"
+#include "main.h"
 
 /**
- * list_len - a function that returns number of elements in linked list
- * @h: input
+ * print_binary - a function that prints binary number
+ * @n: input
  * Return: nothing
  */
 
-size_t list_len(const list_t *h)
+void print_binary(unsigned long int n)
 {
 
-	unsigned int elements = 0;
+	unsigned int flag = 0, max = 32768;
 
-	while (h)
+	if (n == 0)
 	{
-		elements++;
-		h = h->next;
+		_putchar('0');
+		return;
 	}
-	return (elements);
+	while (max)
+	{
+		if (flag == 1 && (n & max) == 0)
+			_putchar('0');
+		else if ((n & max) != 0)
+		{
+			_putchar('1');
+			flag = 1;
+		}
+		max >>= 1;
+	}
 }
