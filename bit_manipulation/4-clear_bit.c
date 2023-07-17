@@ -1,23 +1,17 @@
-#include "lists.h"
+#include "main.h"
 
 /**
- * free_list - frees all elements in linked list
- * @head: input
+ * clear_bit - sets a value of a bit to 0
+ * @n: input
+ * @index: input
  * Return: nothing
  */
 
-void free_list(list_t *head)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 
-	list_t *temp;
-
-	temp = head;
-	while (head)
-	{
-		temp = head;
-		head = head->next;
-		free(temp->str);
-		free(temp);
-	}
-	free(head);
+	if (index > 63)
+		return (-1);
+	*n &= ~(1 << index);
+	return (1);
 }
