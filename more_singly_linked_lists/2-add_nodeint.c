@@ -7,7 +7,7 @@
  * Return: address of a new element or null if failed
  */
 
-list_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 
 	listint_t *temp;
