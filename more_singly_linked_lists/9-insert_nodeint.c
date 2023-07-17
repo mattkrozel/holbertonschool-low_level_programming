@@ -40,7 +40,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		x++;
 	}
 	nnode->n = n;
-	nnnode->next = temp->next;
+	nnode->next = temp->next;
 	temp->next = nnode;
 	return (nnode);
 
