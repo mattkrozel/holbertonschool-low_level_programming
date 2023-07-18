@@ -1,16 +1,29 @@
 #include "main.h"
 
 /**
- * print_binary - a function that prints binary number
- * @n: input
+ * create_file - a function that creates a file
+ * @filename: input
+ * @text_content: input
  * Return: nothing
  */
 
-void print_binary(unsigned long int n)
+int create_file(const char *filename, char *text_content)
 {
 
-	if (n > 1)
-		print_binary(n >> 1);
+	int open;
 
-	_putchar((n & 1) + 48);
+	if (filename == NULL)
+		return (-1);
+
+	open = open(filename, O_WRONLY | O_CREAT | O_TRUNC | 0600);
+	if (open == -1)
+		return (-1);
+
+	if (text_content)
+	{
+		if (write(open, text_content, strlen(text_content)) == -1)
+			return (-1);
+	}
+	close(open);
+	return (1);
 }
