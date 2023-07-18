@@ -1,5 +1,7 @@
 #include "main.h"
 
+int sclose(int);
+
 /**
  * main - function to copy files
  * @argc: input
