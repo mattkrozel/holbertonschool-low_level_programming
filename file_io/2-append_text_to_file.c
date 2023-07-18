@@ -1,20 +1,29 @@
 #include "main.h"
 
 /**
- * get_bit - gets value of bit at specific place
- * @n: input
- * @index: input
+ * append_text_to_file - function that appends text at end of a file
+ * @filename: input
+ * @text_content: input
  * Return: 1 or 0
  */
 
-int get_bit(unsigned long int n, unsigned int index)
+int append_text_to_file(const char *filename, char *text_content)
 {
 
-	int x;
+	int open_file;
+	ssize_t len;
 
-	if (index > 63)
+	if (filename == NULL)
+		return (-1);
+	open_file = open(filename, O_WRONLY | O_APPEND);
+	if (open_file == -1)
+		return (-1);
+	if (text_content != NULL)
+		len = write(open_file, text_content, strlen(text_content));
+	close(open_file);
+
+	if (len == -1)
 		return (-1);
 
-	x = n >> index;
-	return (x & 1);
+	return (1);
 }
