@@ -10,7 +10,7 @@
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 
-	list_t *temp = NULL, *nnode = NULL;
+	dlistint_t *temp = NULL, *nnode = NULL;
 
 	nnode = malloc(sizeof(dlistint_t));
 	if (!nnode)
