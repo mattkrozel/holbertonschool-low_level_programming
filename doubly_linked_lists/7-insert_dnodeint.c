@@ -22,34 +22,36 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	nnode->prev = NULL;
 	nnode->n = n;
 
-	if (!h || !(*h))
-		*h = nnode;
-	else
+	if (!h)
 	{
-		temp = *h;
-		while (idx != x++ && temp->next)
-			temp = temp->next;
-		if (temp->next)
-			nnode->prev = temp->prev;
-		else
-			nnode->prev = temp;
-		if (idx == x)
-			temp->next = nnode, nnode->prev = temp;
-		else if (idx == x - 1)
-		{
-			if (temp->prev)
-				temp->prev->next = nnode;
-			else
-				*h = nnode;
-			temp->prev = nnode;
-			nnode->next = temp;
-		}
-		else
-		{
-			free(nnode);
-			return (NULL);
-		}
+		free(nnode);
+		return (NULL);
 	}
+	if (!(*h))
+	{
+		*h = nnode;
+		return (nnode);
+	}
+	if (idx < 0)
+		idx = -idx;
+	temp = *h;
+	while (temp && x < idx)
+	{
+		temp = temp->next;
+		x++;
+	}
+	if (!temp)
+	{
+		free(nnode);
+		return (NULL);
+	}
+	nnode->prev = temp->prev;
+	if (temp->prev)
+		temp->prev->next = nnode;
+	else
+		*h = nnode;
+	temp->prev = nnode;
+	nnode->next = temp;
 
 	return (nnode);
 }
