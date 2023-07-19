@@ -44,7 +44,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		temp = temp->next;
 		x++;
 	}
-	if (!temp)
+	if (!temp && x == idx)
 	{
 		temp = *h;
 		while (temp->next)
@@ -53,7 +53,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		nnode->prev = temp;
 		return (nnode);
 	}
-	else if (x == idx)
+	else if (temp && x == idx)
 	{
 		nnode->prev = temp->prev;
 		if (temp->prev)
