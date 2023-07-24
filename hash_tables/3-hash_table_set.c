@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	valcop = strdup(value);
 	keycop = strdup(key);
-	nnode - malloc(sizeof(hash_node_t));
+	nnode = malloc(sizeof(hash_node_t));
 	if (!nnode)
 		return (0);
 	nnode->key = keycop;
@@ -41,7 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			}
 			tempnode = tempnode->next;
 		}
-		tempnode = (ht->array)[inndex];
+		tempnode = (ht->array)[index];
 		nnode->next = tempnode;
 		(ht->array)[index] = nnode;
 	}
