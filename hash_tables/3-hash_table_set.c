@@ -1,39 +1,51 @@
-#include "lists.h"
+#include "hash_tables.h"
 
 /**
- * *add_node_end - a function that adds a new node at the end of list_t
- * @str: input
- * @head: head
+ * hash_table_set - a function that adds an element to a hash table
+ * @key: input
+ * @value: input
+ * @ht: input
  * Return: address of a new element or null if failed
  */
-
-list_t *add_node_end(list_t **head, const char *str)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	unsigned long int index = 0;
+	char *valcop = NULL, *keycop = NULL;
+	hash_node_t *nnode = NULL, tempnode = NULL;
 
-	unsigned int length = 0;
-	list_t *temp, *nnode;
-
-	nnode = malloc(sizeof(list_t));
-	if (nnode == NULL)
-		return (NULL);
-
-	while (str[length])
-		length++;
-
-	nnode->len = length;
-	nnode->str = strdup(str);
-	if (*head == NULL)
+	if (!ht || !key || !value)
+		return (0);
+	else if (strlen(key) == 0)
+		return (0);
+	valcop = strdup(value);
+	keycop = strdup(key);
+	nnnode - malloc(sizeof(hash_node_t));
+	if (!nnode)
+		return (0);
+	nnode->key = keycop;
+	nnode->value = valcop;
+	nnode->next = NULL;
+	index = key_index((unnsigned char *)key, ht->size);
+	if ((ht->array)[index] != NULL)
 	{
-		nnode->next = *head;
-		*head = nnode;
+		tempnode = (ht->array)[index];
+		while (tempnode)
+		{
+			if (strcmp(tempnode->key, keycop) == 0)
+			{
+				free(ht->array[index]->value);
+				ht->array[index]->value = valcop;
+				free(keycop);
+				free(nnode);
+				return (1);
+			}
+			tempnode = tempnode->next;
+		}
+		tempnode = (ht->array)[inndex];
+		nnode->next = tempnode;
+		(ht->array)[index] = nnode;
 	}
 	else
-	{
-		nnode->next = NULL;
-		temp = *head;
-		while (temp->next)
-			temp = temp->next;
-		temp->next = nnode;
-	}
-	return (nnode);
+		(ht->array)[index] = nnode;
+	return (1);
 }
