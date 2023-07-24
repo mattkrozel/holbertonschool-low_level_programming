@@ -1,28 +1,16 @@
-#include "lists.h"
+#include "hash_tables.h"
 
 /**
- * *add_node - a function that adds a new node at the beginning of list_t
- * @str: input
- * @head: head
- * Return: address of a new element or null if failed
+ * key_index - a function that gives you index of a key
+ * @key: input
+ * @size: input
+ * Return: nothing
  */
 
-list_t *add_node(list_t **head, const char *str)
+unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
+	unsigned long int index = 0;
 
-	int length = 0;
-	list_t *temp;
-
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
-		return (NULL);
-
-	while (str[length])
-		length++;
-
-	temp->len = length;
-	temp->str = strdup(str);
-	temp->next = *head;
-	*head = temp;
-	return (temp);
+	index = hash_djb2((unsigned char *)key);
+	return (index % size);
 }
