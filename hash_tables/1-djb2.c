@@ -1,20 +1,22 @@
-#include "lists.h"
+#include "hash_tables.h"
 
 /**
- * list_len - a function that returns number of elements in linked list
- * @h: input
+ * hash_djb2 - a function that impements the djb2 algorithm
+ * @str: input
  * Return: nothing
  */
 
-size_t list_len(const list_t *h)
+unsigned long int hash_djb2(const unsigned char *str)
 {
 
-	unsigned int elements = 0;
-
-	while (h)
 	{
-		elements++;
-		h = h->next;
+	unsigned long int hash;
+	int c;
+
+	hash = 5381;
+	while ((c = *str++))
+	{
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
-	return (elements);
+	return (hash);
 }
