@@ -1,23 +1,32 @@
-#include "lists.h"
+#include "hash_tables.h"
 
 /**
- * free_list - frees all elements in linked list
- * @head: input
+ * *hash_table_get - retrieves a value associated with a key
+ * @ht: input
+ * @key: input
  * Return: nothing
  */
 
-void free_list(list_t *head)
+char *hash_table_get(const hash_table_t *ht, const char *key)
 {
+	unsigned long int index = 0;
+	char *val = NULL;
+	hash_node_t *node;
 
-	list_t *temp;
+	if (!ht || !key)
+		return (NULL);
+	else if (strlen(key) == 0)
+		return (NULL);
 
-	temp = head;
-	while (head)
+	index = key_index((unsigned char *)key, ht->size;
+	if ((ht->array)[index] == NULL)
+		return (NULL);
+	node = ht->array[index];
+	while (!val)
 	{
-		temp = head;
-		head = head->next;
-		free(temp->str);
-		free(temp);
+		if (strcmp(node->key, key) == 0)
+			val = node->val;
+		node = node->next;
 	}
-	free(head);
+	return (val);
 }
